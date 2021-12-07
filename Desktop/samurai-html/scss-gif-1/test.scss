@@ -1,0 +1,50 @@
+$dark:   #262626;
+$light:  #dcdcd2;
+$vsize:  400px;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} 
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #202020;
+  font-family: Roboto;
+  color: #454545;
+  a {
+    text-decoration: none;
+    color: #9a9a9a;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+#note {
+  text-align: center;
+  width: $vsize;
+  margin-top: 10px;
+}
+
+#box {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  background: $dark;
+  width: $vsize;
+  height: $vsize;
+  user-select: none; 
+  canvas {
+    width: $vsize;
+    height: $vsize;
+  }
+}
